@@ -9,7 +9,12 @@ html(lang="en")
       
   body
     .container
-      img(src="/img/logo.png")
+      div.flip-container(ontouchstart="this.classList.toggle('hover');")
+        div.flipper
+          div.front
+            //- img(src="/img/logo.png")
+          div.back
+            //- img(src="/img/logo.jpg")
       h1.title= title
       h3= text
 
