@@ -1,5 +1,5 @@
 import os
-from flask import Flask,render_template,send_from_directory
+from flask import Flask, render_template, send_from_directory, abort, redirect, url_for
 import pyjade
 
 app = Flask(__name__)
@@ -9,6 +9,10 @@ app.jinja_env.add_extension('pyjade.ext.jinja.PyJadeExtension')
 
 @app.route('/')
 def index():
+	return redirect(url_for('orek'))
+
+@app.route('/orek')
+def orek():
 	obj = {
 		"title": "Damian Wieczorek",
 		"text": "A temporary homepage..."
