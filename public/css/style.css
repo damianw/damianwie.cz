@@ -10,3 +10,13 @@
 	margin-top: 20px;
 	text-align: center;
 }
+
+
+body { 
+  background-image: url('/img/background.png'); 
+  /*background-size: 100% auto;*/
+  /*background-attachment: fixed; */
+  /*background-repeat: repeat fixed;*/
+  background-repeat: no-repeat;
+  background-position: left top;
+}
