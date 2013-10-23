@@ -1,3 +1,7 @@
+html {
+  height: 100%;
+}
+
 .container img {
 	width: 200px;
 }
@@ -7,18 +11,36 @@
 }
 
 .container {
-	margin-top: 20px;
+  -webkit-transition: visibility 0.6s ease-in-out;
+  -webkit-transition: opacity 0.6s ease-in-out;
+  margin-top: 20px;
 	text-align: center;
+  visibility: hidden;
+  opacity: 0;
 }
 
+.container.visible {
+  -webkit-transition: visibility 0.6s ease-in-out;
+  -webkit-transition: opacity 0.6s ease-in-out;
+  visibility: visible;
+  opacity: 1;
+}
 
 body { 
+  height: 100%;
   background-image: url('/img/texture6.jpg'); 
   /*background-size: 100% auto;*/
   /*background-attachment: fixed; */
   /*background-repeat: repeat fixed;*/
   background-repeat: no-repeat;
   background-position: left top;
+}
+
+.vertical.flip-container.enter {
+  -webkit-transition: all 0.6s ease-in-out;
+  /*-webkit-transform: translate(0,-40%);*/
+  top: 0;
+  margin-top: 20px;
 }
 
 /* BEGIN FLIPPER */
@@ -32,13 +54,13 @@ body {
 }
 
   
-  .flip-container:hover .flipper, .flip-container.hover .flipper, #flip-toggle.flip .flipper {
+  /*.flip-container:hover .flipper, .flip-container.hover .flipper, #flip-toggle.flip .flipper {
     -webkit-transform: rotateY(180deg);
     -moz-transform: rotateY(180deg);
     transform: rotateY(180deg);
     filter: FlipH;
       -ms-filter: "FlipH";
-  }
+  }*/
 
 .flip-container, .front, .back {
   width: 200px;
@@ -85,6 +107,10 @@ body {
 }
 
 .vertical.flip-container {
+  margin-top: -100px;
+  top: 50%;
+  -webkit-transition: all 0.6s ease-in-out;
+  /*-webkit-transform: translate(3em,0);*/
   position: relative;
 }
 
@@ -100,7 +126,7 @@ body {
     transform-origin: 100% 100px;
   }
 
-  .vertical.flip-container:hover .flipper {
+  .vertical.flip-container.flip .flipper {
     -webkit-transform: rotateX(180deg);
     -moz-transform: rotateX(180deg);
     transform: rotateX(180deg);

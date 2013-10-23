@@ -8,15 +8,16 @@ html(lang="en")
     link(rel="stylesheet", href="/css/style.css")
       
   body
+    div.vertical.flip-container(ontouchstart="this.classList.toggle('hover');")
+      div.flipper(onclick="document.querySelector('.flip-container').classList.toggle('enter'); document.querySelector('.container').classList.toggle('visible'); document.querySelector('.vertical.flip-container').classList.toggle('flip'); ")
+        div.front
+          //- img(src="/img/logo.png")
+        div.back
+          //- img(src="/img/logo.jpg")
     .container
-      div.vertical.flip-container(ontouchstart="this.classList.toggle('hover');")
-        div.flipper
-          div.front
-            //- img(src="/img/logo.png")
-          div.back
-            //- img(src="/img/logo.jpg")
-      h1.title= title
-      h3= text
+      div
+        h1.title= title
+        h3= text
 
   // js
   script(src="//code.jquery.com/jquery.js", type='text/javascript')
