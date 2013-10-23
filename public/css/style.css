@@ -13,7 +13,7 @@
 
 
 body { 
-  background-image: url('/img/background.png'); 
+  background-image: url('/img/texture6.jpg'); 
   /*background-size: 100% auto;*/
   /*background-attachment: fixed; */
   /*background-repeat: repeat fixed;*/
@@ -83,4 +83,27 @@ body {
   -moz-transform: rotateY(180deg);
   transform: rotateY(180deg);
 }
+
+.vertical.flip-container {
+  position: relative;
+}
+
+  .vertical .back {
+    -webkit-transform: rotateX(180deg);
+    -moz-transform: rotateX(180deg);
+    transform: rotateX(180deg);
+  }
+
+  .vertical.flip-container .flipper {
+    -webkit-transform-origin: 100% 100px;
+    -moz-transform-origin: 100% 100px;
+    transform-origin: 100% 100px;
+  }
+
+  .vertical.flip-container:hover .flipper {
+    -webkit-transform: rotateX(180deg);
+    -moz-transform: rotateX(180deg);
+    transform: rotateX(180deg);
+  }
+
 /* END FLIPPER */
