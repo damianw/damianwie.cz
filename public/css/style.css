@@ -11,8 +11,9 @@ html {
 }
 
 .container {
-  -webkit-transition: visibility 0.6s ease-in-out;
-  -webkit-transition: opacity 0.6s ease-in-out;
+  -webkit-transition: all 0.6s ease-in-out;
+  -moz-transition: all 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out;
   margin-top: 20px;
 	text-align: center;
   visibility: hidden;
@@ -20,8 +21,6 @@ html {
 }
 
 .container.visible {
-  -webkit-transition: visibility 0.6s ease-in-out;
-  -webkit-transition: opacity 0.6s ease-in-out;
   visibility: visible;
   opacity: 1;
 }
@@ -37,7 +36,6 @@ body {
 }
 
 .vertical.flip-container.enter {
-  -webkit-transition: all 0.6s ease-in-out;
   /*-webkit-transform: translate(0,-40%);*/
   top: 0;
   margin-top: 20px;
@@ -45,6 +43,9 @@ body {
 
 /* BEGIN FLIPPER */
 .flip-container {
+  -webkit-transition: all 0.6s ease-in-out;
+  -moz-transition: all 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out;
   -webkit-perspective: 1000;
   -moz-perspective: 1000;
   perspective: 1000;
