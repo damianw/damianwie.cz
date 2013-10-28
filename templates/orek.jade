@@ -15,9 +15,15 @@ html(lang="en")
         div.back
           //- img(src="/img/logo.jpg")
     .container
-      div
-        h1.title= title
-        h3= text
+      h1.title= title
+      h3= text
+      ul.nav.nav-tabs.nav-justified
+        li.active
+          a(href="#")="About"
+        li
+          a(href="#")="Projects"
+        li
+          a(href="#")="Contact"
 
   // js
   script(src="//code.jquery.com/jquery.js", type='text/javascript')
