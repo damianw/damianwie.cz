@@ -8,13 +8,24 @@ html(lang="en")
     link(rel="stylesheet", href="/css/style.css")
       
   body
-    div.top.separator
-    .container
+    div.top.separator.fast-animate
+      img#drawer-icon(src="/img/ic_drawer.png")
+    .container.fast-animate
+      div.sidebar.slow-animate
+        ul.nav.nav-sidebar
+          li.active
+            a(href="#") Home
+          li
+            a(href="#") Herp
+          li
+            a(href="#") Derp
+          li
+            a(href="#") Foobar
       h2(style="vertical-align: middle;")
         a(href="/resume.pdf") Coming soon...
-    div.bottom.separator
+    div.bottom.separator.fast-animate
       //- img(src="/img/wallpaper-2984723.png")
-    div.vertical.flip-container(ontouchstart="this.classList.toggle('hover');")
+    div.vertical.flip-container.fast-animate(ontouchstart="this.classList.toggle('hover');")
       div.flipper
         div.front
           //- img(src="/img/logo.png")
