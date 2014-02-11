@@ -4,7 +4,7 @@ html {
 }
 
 .container img {
-	width: 200px;
+	width: 150px;
 }
 
 .container h1,h3,h2 {
@@ -17,10 +17,10 @@ h2 a {
 }
 
 .container {
+  /*background: white;*/
   -webkit-transition: all 0.6s ease-in-out;
   -moz-transition: all 0.6s ease-in-out;
   transition: all 0.6s ease-in-out;
-  margin-top: 240px;
 	text-align: center;
   display:block;
   opacity: 0;
@@ -31,20 +31,65 @@ h2 a {
   opacity: 1;
 }
 
-body { 
-  /*height: 100%;*/
+/*body { 
   background-image: url('/img/wallpaper-2984723.png'); 
-  /*background-size: 100% auto;*/
   background-attachment: fixed; 
-  /*background-repeat: repeat fixed;*/
   background-repeat: repeat-x;
   background-position: left top;
+}*/
+
+body {
+  background-image: url('/img/escheresque_ste.png'); 
+  background-attachment: fixed; 
+  background-repeat: repeat;
+  background-position: left top;
+  /*overflow: hidden;*/
+  max-height: 100%;
+  margin-top: 190px;
+}
+
+.separator { 
+  -webkit-transition: all 0.6s ease-in-out;
+  -moz-transition: all 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out;
+  z-index: 10;
+  /*height: 100%;*/
+  background-image: url('/img/wallpaper-2984723.png');
+  background-repeat: repeat-x;
+  background-attachment: scroll;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+.top.separator {
+  background-position: left top;
+  height: 190px;
+}
+
+.top.separator.opened {
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.30);
+}
+
+.bottom.separator {
+  top: 190px;
+  bottom: 0;
+  background-position: left -190px;
+}
+
+.bottom.separator.opened {
+  /*height: 250px;*/
+  box-shadow: 0 -3px 5px rgba(0, 0, 0, 0.30);
+  /*top: 500px;*/
+  top: 94%;
 }
 
 .vertical.flip-container.enter {
   /*-webkit-transform: translate(0,-40%);*/
   top: 0;
   margin-top: 20px;
+  position: fixed;
 }
 
 /* BEGIN FLIPPER */
@@ -71,8 +116,8 @@ body {
   }*/
 
 .flip-container, .front, .back {
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
 }
 
 .flipper {
@@ -94,14 +139,14 @@ body {
   backface-visibility: hidden;
   background-size: 100% auto;
   background-repeat: no-repeat;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
 }
 
 .front {
   background-image: url('/img/logo.png');
-  z-index: 2;
+  z-index: 50;
 }
 
 .back {
@@ -112,14 +157,14 @@ body {
 }
 
 .vertical.flip-container {
-  margin-top: -100px;
-  margin-left: -100px;
+  margin-top: -75px;
+  margin-left: -75px;
   top: 50%;
   left: 50%;
   -webkit-transition: all 0.6s ease-in-out;
   /*-webkit-transform: translate(3em,0);*/
-  position: absolute;
-  border-radius: 100px;
+  position: fixed;
+  border-radius: 75px;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.30), inset 0 0 30px rgba(0, 0, 0, 0.30);
 }
 
@@ -138,9 +183,9 @@ body {
   }
 
   .vertical.flip-container .flipper {
-    -webkit-transform-origin: 100% 100px;
-    -moz-transform-origin: 100% 100px;
-    transform-origin: 100% 100px;
+    -webkit-transform-origin: 100% 75px;
+    -moz-transform-origin: 100% 75px;
+    transform-origin: 100% 75px;
   }
 
   .vertical.flip-container.flip .flipper {

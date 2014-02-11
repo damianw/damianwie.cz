@@ -8,18 +8,15 @@ html(lang="en")
     link(rel="stylesheet", href="/css/style.css")
       
   body
-    div.top.separator
-    .container
-      h2(style="vertical-align: middle;")
-        a(href="/resume.pdf") Coming soon...
-    div.bottom.separator
-      //- img(src="/img/wallpaper-2984723.png")
     div.vertical.flip-container(ontouchstart="this.classList.toggle('hover');")
-      div.flipper
+      div.flipper(onclick="document.querySelector('.flip-container').classList.toggle('enter'); document.querySelector('.container').classList.toggle('visible'); document.querySelector('.vertical.flip-container').classList.toggle('flip'); ")
         div.front
           //- img(src="/img/logo.png")
         div.back
           //- img(src="/img/logo.jpg")
+    .container
+      h2
+        a(href="/resume.pdf") Coming soon...
 
   // js
   script(src="//code.jquery.com/jquery.js", type='text/javascript')
